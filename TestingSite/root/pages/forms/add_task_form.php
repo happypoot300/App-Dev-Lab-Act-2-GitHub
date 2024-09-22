@@ -26,26 +26,26 @@
                 <div class="form-group">
                     <label for="tag">Tag</label>
                     <select id="tag" name="tag">
-                        <option value="personal">Personal</option>
-                        <option value="urgent">School</option>
-                        <option value="important">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="School">School</option>
+                        <option value="Work">Work</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="status">Status</label>
                     <select id="status" name="status">
-                        <option value="incomplete">Active</option>
-                        <option value="complete">Completed</option>
-                        <option value="complete">In Progress</option>
-                        <option value="complete">Pending</option>
+                        <option value="Active">Active</option>
+                        <option value="Completed">Completed</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Pending">Pending</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="priority">Priority</label>
                     <select id="priority" name="priority">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
                     </select>
                 </div>
             </div>

@@ -30,13 +30,24 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".status").each(function () {
+    var status = $(this).text().toLowerCase();
+    if (status === "completed") {
+      $(this).closest("tr").find("td").addClass("strikethrough");
+      var row = $(this).closest("tr");
+      toggleCheckIcon(row);
+    }
+  });
+});
+
 $(document).ready(function () {});
 // add click event handler to check
 $(".check").click(function () {
   const $this = $(this);
   const $td = $this.closest("tr").find(".td__text");
   const $tdStatus = $this.closest("tr").find(".td__text div.status");
-  const taskId = $(this).closest(".dropdown").find("i").attr("data-id");
+  const id = $(this).closest(".dropdown").find("i").attr("data-id");
 
   if ($td.hasClass("strikethrough")) {
     // remove strikethrough class
@@ -46,9 +57,15 @@ $(".check").click(function () {
     // restore previous text
     const previousText = $tdStatus.data("previous-text");
     $tdStatus.text(previousText);
-
+    if ($tdStatus.text() === "Completed") {
+      $tdStatus.addClass("inprogressCss");
+      $tdStatus.text("In Progress");
+      var row = $(this).closest("tr");
+      toggleCheckIcon(row);
+    }
     // add CSS class based on status text
     const status = previousText.toLowerCase();
+    console.log(status);
     switch (status) {
       case "active":
         $tdStatus.addClass("activeCss");
@@ -70,14 +87,14 @@ $(".check").click(function () {
   }
 
   // update database
-  updateTaskStatus(taskId, $tdStatus.text().toLowerCase());
+  updateTaskStatus(id, $tdStatus.text().toLowerCase());
 });
 
 // function to update task status in database
-function updateTaskStatus(taskId, status) {
+function updateTaskStatus(id, status) {
   $.ajax({
     type: "GET",
-    url: "root/pages/crud/update_task.php?id=" + taskId + "&status=" + status,
+    url: "root/pages/crud/update_task.php?id=" + id + "&status=" + status,
     success: function (response) {
       console.log("Task status updated successfully");
     },
@@ -88,6 +105,10 @@ function updateTaskStatus(taskId, status) {
 }
 
 $(document).ready(function () {
+  $(".fa-check").click(function () {
+    var row = $(this).closest("tr");
+    toggleCheckIcon(row);
+  });
   $(".button__addtask").click(function () {
     window.location.href = "pages/forms/add_task_form.php";
   });
@@ -112,3 +133,7 @@ $(document).ready(function () {
     window.location.href = "pages/crud/delete_task.php?id=" + id;
   });
 });
+
+function toggleCheckIcon(row) {
+  $(row).find(".fa-check").toggleClass("active");
+}
