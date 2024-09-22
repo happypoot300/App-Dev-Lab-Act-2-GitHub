@@ -31,9 +31,14 @@ User Story 3: As a user, i want to be able to Delete Tasks
 Sprint 4:
 User Story 4: As a user, i want to be able to mark my tasks as done
     -Design the list of all task to have a working checkbox
-    -When the User clicks on the checkbox that task gets a striketext
-    -Add other visual design to better diffirentiate each column
+    -When the User clicks on the checkbox that task gets a striketext and marked completed
+    -Add other visual designs to better diffirentiate each column
     -Refactor code for better readability 
     -Test for any errors/bugs
 
 
+Sprint 5:
+User Story 5: As a user, i want to be able to 
+    -
+    -Refactor code for better readability 
+    -Test for any errors/bugs

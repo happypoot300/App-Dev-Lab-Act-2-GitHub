@@ -8,6 +8,7 @@ Product Backlog
     -A form should pop up and should contain fields to input a title, tag, status, priority, start date, end date
     -Upon submission, the added task should be reflected on the list of all tasks
 
+
 2. As a user, i should be able to Update Tasks
   *Accepting Criteria
     -There should be a button at each tasks where the user can click 
@@ -15,23 +16,43 @@ Product Backlog
     -A form should show when the "edit" option is clicked, the form should show the data that the task hav
     -Upon changing the task details, when the user click the submit button, the changes should reflect in the list of all tasks
 
+
 3. As a user, i want to be able to Delete Tasks
   *Accepting Criteria
     -There should be a button at each tasks where the user can click 
     -A dropdown should show an option of "Delete",to delete a task
     -Upon clicking the delete option, the task should be removed from the list of all task
 
-4. As a user, i want to be able to set customized tags for each task
-  *Accepting Criteria
-    -User can click the drop down choice and select (Active, In Progress, Completed)
 
-5. As a user, i want to be able to view the website on both mobile and pc
+4. As a user, i want to be able to mark my tasks done
   *Accepting Criteria
+    -A checkbox that the user can interact
+    -Upon interaction with the checkbox, the task should be crossedout
+    -A change in status should also happen, changing the status of the task as "Completed"
 
-6. User should be able to Sort Task (Alphabetical, reverse, etc, etc)
+
+5. As a user, i want to be able to set customized tags for each task
+  *Accepting Criteria
+    -User can click the drop down choice and select the default tags (Personal, School, Work)
+    -When adding or editing task details, the user can either select the default tags or add a custom one
+    -Once the user added a custom tag, it should be reflected in the list of all task
+
+
+6. User should be able to Sort Task (Alphabetical, Reverse, Date, Status, Priority)
   *Accepting Criteria
     -Users can sort the tasklists in (Order, Reverse Order, Alphabetical, Date Created)
-    -Existing Tasks can be sorted alphabetically based on their title
+    -Existing tasks can be sorted alphabetically a-z, based on their title
+    -Existing tasks can also be sorted in reverse z-a
+    -Existing tasks can be sorted based on Date (starting or ending)
+    -Existing tasks can be sorted on priority (Low, Medium, High)
+
+
+7. As a user, i want to be able to view the website on both mobile and pc
+  *Accepting Criteria
+    -Design the website to be dynamic
+    -Develop the website structure to be dynamic
+
+
 
 
 
