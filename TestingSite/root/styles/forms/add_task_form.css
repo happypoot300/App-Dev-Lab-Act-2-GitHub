@@ -1,0 +1,135 @@
+:root {
+  --auburn: #aa2426ff;
+  --steel-blue: #3887bfff;
+  --pigment-green: #41ab5dff;
+  --old-gold: #afac45ff;
+  --pumpkin: #ff7200ff;
+  --pumkin_hover: #ff8533;
+  --french-gray: #b5b3bcff;
+  --oxford-blue: #111129ff;
+  --english-violet: #574167ff;
+  --baby-powder: #fcfefcff;
+
+  --standardTitles: 25px;
+  --standardText: 20px;
+}
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--oxford-blue);
+  color: var(--baby-powder);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 1000px; /* Adjust container width */
+  height: fit-content;
+  background-color: var(--oxford-blue);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--pumpkin);
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group__task-title {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  font-size: var(--standardText);
+  width: 100%;
+}
+
+.form-group .input {
+  width: 100%;
+}
+
+label {
+  margin-right: 15px;
+  font-size: var(--standardText);
+  text-align: left;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid var(--baby-powder);
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%; /* Ensure inputs fill their container */
+  color-scheme: dark;
+}
+
+option {
+  background-color: var(--oxford-blue);
+}
+
+input[type="date"] {
+  appearance: none;
+}
+
+.btn-submit {
+  background-color: var(--pumpkin);
+  color: var(--oxford-blue);
+  padding: 5px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: var(--standardTitles);
+  font-weight: 900;
+  text-align: center;
+}
+
+.btn-submit:hover {
+  background-color: var(--pumkin_hover);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__backbutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.backbutton {
+  height: 40px;
+  width: 60px;
+  border-radius: 400px;
+  text-align: center;
+  font-size: var(--standardTitles);
+  color: var(--oxford-blue);
+  font-weight: 900;
+  background-color: var(--pumpkin);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.backbutton:hover {
+  background-color: var(--pumkin_hover);
+  background-image: url(../../i);
+}

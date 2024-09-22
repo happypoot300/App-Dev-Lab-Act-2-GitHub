@@ -1,0 +1,39 @@
+Sprint Backlog
+
+Sprint 1:
+User Story 1: As a user, i want to be able to Create Tasks
+    -Design the frontend interface and "Create task" form
+    -Develop "Create task" form and add input validations
+    -Connect the backend functionality to "Create task" form
+    -Refactor code for better readability 
+    -Test "Create task" form for any errors/bugs
+
+
+Sprint 2:
+User Story 2: As a user, i want to be able to Update Tasks
+    -Design the "Edit task" option and form
+    -Develop "Edit task" form and other validations needed
+    -Connect the backend functionality to the "Edit task" form
+    -Add a checkbox, once clicked update the status of the task
+    -Refactor code for better readability
+    -Test the "Edit task" form for any errors/bugs
+
+
+Sprint 3:
+User Story 3: As a user, i want to be able to Delete Tasks
+    -Design the "Delete task" option and form
+    -Develop "Delete task" form and other validations needed
+    -Connect the backend to "Delete task" form
+    -Refactor code for better readability 
+    -Test the Delete task form for any errors/bugs
+
+
+Sprint 4:
+User Story 4: As a user, i want to be able to mark my tasks as done
+    -Design the list of all task to have a working checkbox
+    -When the User clicks on the checkbox that task gets a striketext
+    -Add other visual design to better diffirentiate each column
+    -Refactor code for better readability 
+    -Test for any errors/bugs
+
+
