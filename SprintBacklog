@@ -1,44 +1,41 @@
+
+
 Sprint Backlog
 
 Sprint 1:
-User Story 1: As a user, i want to be able to Create Tasks
-    -Design the frontend interface and "Create task" form
-    -Develop "Create task" form and add input validations
-    -Connect the backend functionality to "Create task" form
-    -Refactor code for better readability 
-    -Test "Create task" form for any errors/bugs
+User Story 1: As a user, I want to be able to create tasks to organize my work.
+    -Design the frontend interface for the "Create Task" form.
+    -Develop the "Create Task" form with input validations.
+    -Connect the backend functionality to the "Create Task" form.
+    -Refactor code for improved readability and maintainability.
+    -Conduct testing on the "Create Task" form to identify and fix any errors or bugs.
 
 
 Sprint 2:
-User Story 2: As a user, i want to be able to Update Tasks
-    -Design the "Edit task" option and form
-    -Develop "Edit task" form and other validations needed
-    -Connect the backend functionality to the "Edit task" form
-    -Add a checkbox, once clicked update the status of the task
-    -Refactor code for better readability
-    -Test the "Edit task" form for any errors/bugs
+User Story 2: As a user, I want to be able to update tasks to modify their details as needed.
+    -Design the "Edit Task" option and corresponding form.
+    -Develop the "Edit Task" form and implement necessary validations.
+    -Add a checkbox that updates the status of the task when clicked.
+    -Connect the backend functionality to the "Edit Task" form.
+    -Refactor the code for improved readability and maintainability.
+    -Conduct testing on the "Edit Task" form to identify and fix any errors or bugs.
 
 
 Sprint 3:
-User Story 3: As a user, i want to be able to Delete Tasks
-    -Design the "Delete task" option and form
-    -Develop "Delete task" form and other validations needed
-    -Connect the backend to "Delete task" form
-    -Refactor code for better readability 
-    -Test the Delete task form for any errors/bugs
+User Story 3: As a user, I want to be able to delete tasks to keep my task list organized.
+    -Design the "Delete Task" option.
+    -Develop the "Delete Task" functionality and implement necessary validations.
+    -Connect the backend to the "Delete Task" functionality.
+    -Refactor the code for improved readability and maintainability.
+    -Conduct testing on the "Edit Task" form to identify and fix any errors or bugs.
 
 
 Sprint 4:
-User Story 4: As a user, i want to be able to mark my tasks as done
-    -Design the list of all task to have a working checkbox
-    -When the User clicks on the checkbox that task gets a striketext and marked completed
-    -Add other visual designs to better diffirentiate each column
-    -Refactor code for better readability 
-    -Test for any errors/bugs
+User Story 4: As a user, I want to be able to mark my tasks as done to track my progress.
+    -Design the task list to include a functional checkbox for each task.
+    -Implement functionality so that clicking the checkbox applies strikethrough text and marks the task as completed.
+    -Enhance visual design elements to better differentiate each column in the task list.
+    -Refactor the code for improved readability and maintainability.
+    -Test the task completion functionality to identify and resolve any errors or bugs.
 
 
-Sprint 5:
-User Story 5: As a user, i want to be able to 
-    -
-    -Refactor code for better readability 
-    -Test for any errors/bugs
