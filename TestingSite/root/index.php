@@ -77,13 +77,14 @@ try {
                 } else {
                     foreach ($result as $row) {
                         echo "<tr>";
-                        echo "<td class='td__text'><i class='fa-solid fa-check fa-lg check'></i></td>";
+                        echo "<td class='td__text'><i class='fa-solid fa-check fa-lg check' data-id='" . $row['id'] . "'></i></td>";
                         echo "<td class='td__text'>" . htmlspecialchars($row["task_title"]) . "</td>";
                         echo "<td class='td__text'>" . htmlspecialchars($row["tag"]) . "</td>";
                         echo "<td class='td__text '><div class='status'>" . htmlspecialchars($row["status"]) . "</div></td>";
                         echo "<td class='td__text'>" . htmlspecialchars($row["start_date"]) . "</td>";
                         echo "<td class='td__text enddate'>" . htmlspecialchars($row["end_date"]) . "</td>";
                         echo "<td class='td__text'><i class='fa-solid fa-triangle-exclamation fa-sm'></i>" . htmlspecialchars($row["priority"]) . "</i></td>";
+
 
                         echo "<td class='td__text'>
                             <div class='dropdown'>

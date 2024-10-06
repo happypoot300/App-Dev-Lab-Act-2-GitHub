@@ -1,3 +1,4 @@
+// Jquery CSS styling of Index page for the task status
 $(document).ready(function () {
   // Select the table cells with the class 'status'
   $(".status").each(function () {
@@ -30,6 +31,7 @@ $(document).ready(function () {
   });
 });
 
+// Jquery of Index page for the strikethrough when status is set to "completed"
 $(document).ready(function () {
   $(".status").each(function () {
     var status = $(this).text().toLowerCase();
@@ -41,13 +43,19 @@ $(document).ready(function () {
   });
 });
 
+// Jquery of Index page its for the checkbox
 $(document).ready(function () {});
-// add click event handler to check
+// add click event handler to "check"
 $(".check").click(function () {
   const $this = $(this);
-  const $td = $this.closest("tr").find(".td__text");
-  const $tdStatus = $this.closest("tr").find(".td__text div.status");
-  const id = $(this).closest(".dropdown").find("i").attr("data-id");
+  const $td = $(this).closest("tr").find(".td__text");
+  const $tdStatus = $(this).closest("tr").find(".td__text div.status");
+  const $id = $(this)
+    .closest("tr")
+    .find(".td__text i.fa-check")
+    .attr("data-id");
+
+  console.log("id:" + $id);
 
   if ($td.hasClass("strikethrough")) {
     // remove strikethrough class
@@ -55,18 +63,19 @@ $(".check").click(function () {
     $tdStatus.removeClass("completedCss activeCss inprogressCss pendingCss");
 
     // restore previous text
-    const previousText = $tdStatus.data("previous-text");
-    $tdStatus.text(previousText);
+    const $previousText = $tdStatus.data("previous-text");
+    $tdStatus.text($previousText);
     if ($tdStatus.text() === "Completed") {
       $tdStatus.addClass("inprogressCss");
       $tdStatus.text("In Progress");
       var row = $(this).closest("tr");
       toggleCheckIcon(row);
+      updateTaskStatus($id, $tdStatus.text());
     }
+
     // add CSS class based on status text
-    const status = previousText.toLowerCase();
-    console.log(status);
-    switch (status) {
+    const $status = $previousText.toLowerCase();
+    switch ($status) {
       case "active":
         $tdStatus.addClass("activeCss");
         break;
@@ -87,16 +96,19 @@ $(".check").click(function () {
   }
 
   // update database
-  updateTaskStatus(id, $tdStatus.text().toLowerCase());
+  updateTaskStatus($id, $tdStatus.text());
 });
 
 // function to update task status in database
-function updateTaskStatus(id, status) {
+function updateTaskStatus($id, $status) {
   $.ajax({
-    type: "GET",
-    url: "root/pages/crud/update_task.php?id=" + id + "&status=" + status,
+    type: "POST",
+    url: "../root/pages/crud/update_task.php",
+    data: { updateTaskStatus: "true", id: $id, status: $status },
+
     success: function (response) {
       console.log("Task status updated successfully");
+      console.log("id: " + $id + ", status: " + $status);
     },
     error: function (xhr, status, error) {
       console.log("Error updating task status: " + error);

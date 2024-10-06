@@ -2,7 +2,6 @@
 try {
     require_once "../../scripts/dbh_inc.php";
 
-    // Get the id of the task from the url
     $id = $_GET["id"];
 
     $query = "SELECT * FROM tasks_tbl WHERE id = :id";
@@ -70,10 +69,9 @@ try {
                 <div class="form-group">
                     <label for="priority">Priority</label>
                     <select id="priority" name="priority">
-                        <?php var_dump($result); ?>
                         <option value="Low" <?php echo $result["priority"] === "Low" ? "selected" : "" ?>>Low</option>
                         <option value="Medium" <?php echo $result["priority"] === "Medium" ? "selected" : "" ?>>Medium</option>
-                        <option value="high" <?php echo $result["priority"] === "High" ? "selected" : "" ?>>High</option>
+                        <option value="High" <?php echo $result["priority"] === "High" ? "selected" : "" ?>>High</option>
                     </select>
                 </div>
             </div>
